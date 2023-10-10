@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  chrome:
+    image: seleniarm/standalone-chromium:latest  # image for Apple ARM
+    # image: selenium/standalone-chrome:latest  - use this if running on Linux
+    container_name: chrome
+    ports:
+      - '4444:4444'
+      - '7900:7900'  # [optional] Open in browser - http://localhost:7900/?autoconnect=1&resize=scale&password=secret
+    shm_size: 2g
